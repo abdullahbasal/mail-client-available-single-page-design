@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      body {
+        margin: 0px;
+      }
+      .container {
+        background-color: #eaf5ff;
+      }
+
+      .block {
+        text-align: center;
+        padding: 0px 20px;
+      }
+      .block:before {
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+      }
+
+      .logo {
+        display: inline-block;
+        padding-top: 80px;
+        padding-bottom: 30px;
+        text-align: center;
+        cursor: pointer;
+      }
+      .logo img {
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+
+        width: 135px;
+        height: 48px;
+      }
+      .upper-side {
+        display: inline-block;
+        width: 100%;
+        max-width: 600px;
+        background-color: #da5630;
+        text-align: center;
+      }
+
+      #upper-side-logo {
+        width: 130px;
+        height: 115px;
+        margin-top: 52px;
+        margin-bottom: 35.55px;
+      }
+      .sub-text {
+        width: 341px;
+        height: 60px;
+        display: inline-block;
+        margin-bottom: 40px;
+      }
+      .sub-text p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 27, 6px;
+        letter-spacing: -1.5%;
+        text-align: center;
+        color: #ffffff;
+      }
+
+      #product-hunt {
+        width: 146px;
+        height: 34px;
+        margin-bottom: 40px;
+      }
+      .button-div {
+        margin-bottom: 50px;
+      }
+      .upper-side button {
+        width: 223px;
+        height: 50px;
+        background-color: #ffffff;
+        color: #da5630;
+        border: 0px solid;
+        border-radius: 10px;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 20px;
+        line-height: 30, 1px;
+        letter-spacing: -2.5%;
+        cursor: pointer;
+      }
+      .vote-button {
+        margin-bottom: 40px;
+      }
+      .middle-side {
+        display: inline-block;
+        max-width: 600px;
+        background-color: #ffffff;
+        text-align: left;
+      }
+      .upper-text {
+        padding-top: 55px;
+        margin-bottom: 25px;
+        margin-left: 54px;
+      }
+      .upper-text p {
+        margin-block-start: 0px;
+        font-family: Arial;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 21px;
+        color: #3e3e3e;
+      }
+      .content-text {
+        color: #3e3e3e;
+        font-family: Arial;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 150.5%;
+        margin-left: 54px;
+        margin-right: 54px;
+        margin-bottom: 31px;
+      }
+      .sender-info {
+        margin-left: 54px;
+      }
+      .email-sender-image {
+        word-break: break-all;
+        display: inline-block;
+        vertical-align: middle;
+        margin-bottom: 13px;
+      }
+      .email-sender {
+        padding-left: 20px;
+        display: inline-block;
+      }
+      .name {
+        font-family: Arial;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 18px;
+        color: #707070;
+        margin: 0px 0px;
+      }
+      .job-position {
+        font-family: Arial;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 18px;
+        color: #707070;
+        margin: 0px;
+      }
+
+      .content-sub-area {
+        text-align: center;
+        margin-top: 75px;
+        margin-bottom: 50px;
+      }
+
+      .content-sub-area p {
+        font-family: Arial;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 23px;
+        text-align: center;
+        letter-spacing: -0.015em;
+        color: #3e3e3e;
+      }
+
+      .middle-side button {
+        width: 349px;
+        height: 50px;
+        background-color: #da5630;
+        color: #ffffff;
+        border: 0px solid;
+        border-radius: 10px;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 20px;
+        line-height: 30, 1px;
+        letter-spacing: -2.5%;
+        margin-top: 24px;
+        margin-bottom: 104px;
+        cursor: pointer;
+      }
+
+      .bottom-side {
+        max-width: 600px;
+        display: inline-block;
+        text-align: center;
+        background-color: #eaf5ff;
+        margin-top: 30px;
+      }
+      .bottom-side p {
+        margin-block-start: 0px;
+        margin-block-end: 0px;
+      }
+      .bottom-side-logo {
+        padding: 36px 0px 29px 0px;
+        cursor: pointer;
+      }
+      .bottom-side-logo img {
+        width: 83px;
+        height: 30px;
+      }
+      .bottom-side-text {
+        display: inline-block;
+        height: 20px;
+        font-family: Arial;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 150.5%;
+        text-align: center;
+        letter-spacing: -0.025em;
+        color: #707070;
+        margin-bottom: 25px;
+      }
+      .adress {
+        display: inline-block;
+        height: 54px;
+        font-family: Arial;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 150.5%;
+        text-align: center;
+        letter-spacing: -0.025em;
+        color: #707070;
+        margin-bottom: 21px;
+      }
+      .social-icons .facebook,
+      .twitter,
+      .linkedin,
+      .google,
+      .instagram {
+        display: inline-block;
+        margin-top: 30px;
+        margin-left: 8px;
+        cursor: pointer;
+      }
+      .social-icons {
+        margin-bottom: 20px;
+      }
+      .bottom-side-menu div {
+        display: inline-block;
+        margin: 0px 70px 0px 0px;
+        text-align: center;
+        cursor: pointer;
+      }
+      .privacy-policy {
+        padding-left: 120px;
+      }
+      .bottom-side-menu p {
+        display: inline-block;
+        text-decoration: underline;
+        font-family: Arial;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 150.5%;
+        text-align: center;
+        letter-spacing: -0.025em;
+        text-decoration-line: underline;
+        color: #707070;
+      }
+
+      @media only screen and (max-width: 660px) {
+        .privacy-policy {
+          padding-left: 20px;
+        }
+        .bottom-side div {
+          margin: 0px 20px 0px 0px;
+        }
+
+        .bottom-side-menu div {
+          margin: 0px 0px 0px 0px;
+        }
+      }
+      @media only screen and (max-width: 470px) {
+        .middle-side button {
+          width: 250px;
+        }
+        .bottom-side div {
+          margin: 0px 0px 0px 0px;
+        }
+      }
+      @media only screen and (max-width: 360px) {
+        .privacy-policy {
+          padding-left: 20px;
+        }
+
+        .bottom-side div {
+          margin: 0px 0px 0px 0px;
+        }
+
+        .bottom-side-menu div {
+          margin: 0px 0px 0px 0px;
+        }
+        .sub-text {
+          width: 250px;
+        }
+      }
+    </style>
+    <title>CvLogin'e Destek Zamanı!</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="block">
+        <div class="logo">
+          <img src="https://i.hizliresim.com/nck1ts7.png" alt="" />
+        </div>
+      </div>
+      <div class="block">
+        <div class="upper-side">
+          <div>
+            <img
+              src="https://i.hizliresim.com/7trmsik.png"
+              alt=""
+              id="upper-side-logo"
+            />
+          </div>
+          <div class="sub-text">
+            <p>Over 1.4 million CVs created in cvlogin</p>
+          </div>
+          <div>
+            <img
+              src="https://i.hizliresim.com/o6zlmnk.png"
+              alt=""
+              id="product-hunt"
+            />
+          </div>
+          <div class="vote-button"><button>Vote Now</button></div>
+        </div>
+      </div>
+      <div class="block">
+        <div class="middle-side">
+          <div class="upper-text"><p>Merhaba { Vorname},</p></div>
+          <div class="content-text">
+            <p>
+              Bu sene bir çok hedefimize sizler ile birlikte ulaştık. 1 Mio dan
+              fazla üyeye sizler ile birlikte ulaştık. 1,4 Mio dan fazla CV
+              oluşturuldu. Birçok üyemiz vermiş olduğumuz destek ile yeni bir
+              kariyer e yelken açtı. Şimdi sizlerden destek bekliyoruz.<br /><br />
+              Sizlerin desteği ile Product Hunt'ta cvlogin'e vereceğiniz oylar
+              ile, cvlogin'in dünya çapında duyulmasına katkıda bulunaksınız.<br /><br />
+              Değerli katkılarınızı bekliyoruz.<br /><br />Producthunt.com bu
+              linke tıkladıktan sonra, Twitter ya da Facebook hesabınızla giriş
+              yapıp, oy sayacının üzerine tıklayarak oy verebilirsiniz.<br /><br />
+              Katkılarınız için şimdiden teşekkür ederiz!
+            </p>
+          </div>
+          <div class="sender-info">
+            <div class="email-sender-image">
+              <img src="https://i.hizliresim.com/j4g76yp.png" alt="" />
+            </div>
+            <div class="email-sender">
+              <p class="name">Birol Kabakoğlu</p>
+              <p class="job-position">Co-Founder</p>
+            </div>
+          </div>
+          <div class="content-sub-area">
+            <p>Producthunt’ta oy ver</p>
+            <button>Hemen Oy Kullan</button>
+          </div>
+        </div>
+      </div>
+      <div class="block">
+        <div class="bottom-side">
+          <div class="bottom-side-logo">
+            <img src="https://i.hizliresim.com/nck1ts7.png" alt="" />
+          </div>
+          <div class="bottom-side-text">
+            <p>
+              Bu postayı, {{ contact.EMAIL }} e-posta adresiyle, cvlogin GmbH'ye
+              kaydolduğunuz için aldınız.
+            </p>
+          </div>
+          <div class="adress">
+            <p>
+              cvlogin GmbH, Schröderstrasse 12, 10115 Berlin, Deutschland, Tel.:
+              +49 30 76 76 8043 Email: info@cvlogin.com Amtsgericht Berlin
+              Charlottenburg HRB 204125 B Geschäftsführer: Birol Kabakoglu, Dr.
+              Ralph Werner
+            </p>
+          </div>
+          <div class="social-icons">
+            <div class="facebook">
+              <img src="https://i.hizliresim.com/7ki5moc.png" alt="" />
+            </div>
+            <div class="twitter">
+              <img src="https://i.hizliresim.com/sd8k6gf.png" alt="" />
+            </div>
+            <div class="google">
+              <img src="https://i.hizliresim.com/on94lxe.png" alt="" />
+            </div>
+            <div class="linkedin">
+              <img src="https://i.hizliresim.com/dvaojtz.png" alt="" />
+            </div>
+            <div class="instagram">
+              <img src="https://i.hizliresim.com/ab3lupx.png" alt="" />
+            </div>
+          </div>
+          <div class="bottom-side-menu">
+            <div class="privacy-policy"><p>Gizlilik Politikası</p></div>
+            <div class=""><p>İletişim</p></div>
+            <div class=""><p>E-posta Listesinden Çık</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
